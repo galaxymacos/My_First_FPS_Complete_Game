@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/RobotRageScene.unity
+    guid: 387dc34cc024ba244b623bd21a35bf68
+  - enabled: 1
+    path: Assets/Scenes/FinalBossScene.unity
+    guid: 9a2866f441b8ca74cb5f3997244ac416
+  m_configObjects: {}

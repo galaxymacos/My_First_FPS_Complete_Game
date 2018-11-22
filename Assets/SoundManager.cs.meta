@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: db05ba6eba1e1554db8de7d83822e482
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - deagleClipOut: {instanceID: 0}
+  - deagleClipin: {instanceID: 0}
+  - Ak47ClipOut: {instanceID: 0}
+  - Ak47ClipIn: {instanceID: 0}
+  - M4A1ClipOut: {instanceID: 0}
+  - M4A1ClipIn: {instanceID: 0}
+  - enemySpawn: {fileID: 8300000, guid: 0d43fbce2ca0b67439d930e15c6739b0, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
