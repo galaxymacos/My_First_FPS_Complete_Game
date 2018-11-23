@@ -410,4 +410,12 @@ MonoBehaviour:
   - Assets/Western Props/Models/Closed Sack/Closed_Sack.fbx
   - Assets/Western Props/Models/Coffee Sack/Coffee_Sack.fbx
   - Assets/Western Props/Models/Whisky Bottle/Whisky_Bottle.fbx
-  uvOverlapAssetList: 00000000ffffffff010100000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000
+  - Assets/Prefab/Enemy/whiteclown_n_hallin.fbx
+  - Assets/Prefab/Enemy/whiteclown_n_hallin@Walking.fbx
+  - Assets/Prefab/whiteclown_n_hallin@Left Turn.fbx
+  - Assets/Prefab/Enemy/whiteclown_n_hallin@Left Turn(1).fbx
+  - Assets/Prefab/Enemy/whiteclown_n_hallin@Right.fbx
+  - Assets/Prefab/Enemy/whiteclown_n_hallin@Right Turn.fbx
+  - Assets/Prefab/Enemy/whiteclown_n_hallin@Left Turn.fbx
+  - Assets/Prefab/Enemy/whiteclown_n_hallin@Idle.fbx
+  uvOverlapAssetList: 00000000ffffffff0101000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

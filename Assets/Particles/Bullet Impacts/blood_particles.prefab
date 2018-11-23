@@ -71,8 +71,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400006}
-  - component: {fileID: 11482216}
   - component: {fileID: 8290992}
+  - component: {fileID: 114963794369648858}
   m_Layer: 0
   m_Name: blood_particles
   m_TagString: Untagged
@@ -581,18 +581,6 @@ AudioSource:
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11482216
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21498e7c87a2cf48aa63bb0d1162d3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeOut: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -639,3 +627,15 @@ Prefab:
 --- !u!1002 &100100001
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!114 &114963794369648858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec969fd8c0553074c80a41caab9f26f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disappearTime: 0.5

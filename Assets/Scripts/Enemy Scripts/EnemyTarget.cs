@@ -10,10 +10,7 @@ public class EnemyTarget : MonoBehaviour {
     private AudioSource _audioSource;
     [SerializeField] private float hp = 200f;
 
-    private Material mat;
-
     void Start() {
-        mat = GetComponent<Renderer>().material;
         _audioSource = GetComponent<AudioSource>();
     }
     // Update is called once per frame
@@ -26,19 +23,9 @@ public class EnemyTarget : MonoBehaviour {
 
     public void TakeDamage(float damage) {
         _audioSource.Play();
-        StartCoroutine(TurnRedAnimation());
         hp -= damage;
         if (hp <= 0)
             Die();
-    }
-
-    IEnumerator TurnRedAnimation() {
-        mat.color = Color.red;
-        mat.SetColor("_EmissionColor",Color.red);
-        yield return new WaitForSeconds(0.01f);
-        mat.color = Color.white;
-        mat.SetColor("_EmissionColor",Color.yellow);
-
     }
 
     public void Die() {

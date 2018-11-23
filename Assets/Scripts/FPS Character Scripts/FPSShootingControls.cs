@@ -10,12 +10,18 @@ public class FPSShootingControls : MonoBehaviour {
 
     private FPSController FpsController;
 
-    private void Start() {
-        FpsController = GetComponent<FPSController>();
-    }
+ 
 
     [SerializeField] private GameObject concreteImpact;
+    [SerializeField] private GameObject bloodParticle;
+    private AudioSource audioSource;
 
+
+    private void Start()
+    {
+        FpsController = GetComponent<FPSController>();
+        audioSource = GetComponentsInChildren<AudioSource>()[1];
+    }
     // Update is called once per frame
     void FixedUpdate() {
         Shoot();
@@ -35,8 +41,8 @@ public class FPSShootingControls : MonoBehaviour {
                 if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit,Mathf.Infinity)) {
   
 //                    Debug.DrawRay(mainCam.transform.position, mainCam.transform.forward,Color.red,1);
-                    Instantiate(concreteImpact, hit.point, Quaternion.LookRotation(hit.normal));
-                    GameObject hitObject = hit.transform.gameObject;
+                    
+                    GameObject hitObject = hit.collider.transform.gameObject;
                     if (hitObject.CompareTag("Board")) {
                         hit.transform.gameObject.GetComponent<Animator>().SetTrigger("Hit");
                         switch (hitObject.name) {
@@ -53,10 +59,29 @@ public class FPSShootingControls : MonoBehaviour {
                         hitObject.GetComponent<TrophyBehavior>().PlayTrophy();
                     }
 
-                    var targetScript = hit.transform.gameObject.GetComponent<EnemyTarget>();
-                    if (targetScript != null) {
-                        targetScript.TakeDamage(FpsController.currentWeapon.damage);
+                    EnemyTarget targetScript;
+                    if (hitObject.name == "Head") {
+                        targetScript = hit.transform.gameObject.GetComponent<EnemyTarget>();
+                        GameObject BloodGameObject = Instantiate(bloodParticle, hit.point, Quaternion.LookRotation(hit.normal));
+                        targetScript.TakeDamage(FpsController.currentWeapon.damage*2);
+                        if (FpsController.currentHandsWeapon.gameObject.name == "deagle") {
+                            audioSource.Play();
+                        }
                     }
+                    else {
+                        targetScript = hit.transform.gameObject.GetComponent<EnemyTarget>();
+                        if (targetScript != null)
+                        {
+                            Instantiate(bloodParticle, hit.point, Quaternion.LookRotation(hit.normal));
+                            targetScript.TakeDamage(FpsController.currentWeapon.damage);
+                        }
+                        else
+                        {
+                            Instantiate(concreteImpact, hit.point, Quaternion.LookRotation(hit.normal));
+                        }
+                    }
+
+                    
                 }
             }
         }
