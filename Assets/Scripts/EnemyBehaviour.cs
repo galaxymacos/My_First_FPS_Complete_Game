@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(Ragdoll))]
 public class EnemyBehaviour : MonoBehaviour {
 
 	[SerializeField] internal GameObject player;
@@ -30,8 +32,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter(Collision other) {
-		if (other.gameObject.name == "FPS Player") {
-			other.gameObject.GetComponent<Target>().Die();
-		}
-	}
+        if (other.gameObject.name == "FPS Player")
+        {
+            other.gameObject.GetComponent<Target>().Die();
+        }
+    }
+
+
 }

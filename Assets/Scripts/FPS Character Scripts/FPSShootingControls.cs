@@ -15,6 +15,7 @@ public class FPSShootingControls : MonoBehaviour {
     [SerializeField] private GameObject concreteImpact;
     [SerializeField] private GameObject bloodParticle;
     private AudioSource audioSource;
+    internal Vector3 lastHitPosition;
 
 
     private void Start()
@@ -34,7 +35,7 @@ public class FPSShootingControls : MonoBehaviour {
         else {
             if ((FpsController.currentWeapon.name == "deagle"
                 ? Input.GetMouseButtonDown(0)
-                : Input.GetMouseButton(0)) && Time.time > nextTimeToFire && !FpsController.isReloading) {
+                : Input.GetMouseButton(0)) && Time.time > nextTimeToFire && !FpsController.isReloading && FpsController.currentWeapon.bulletLeft >0) {
                 FpsController.BulletDown();
                 nextTimeToFire = Time.time + 1f / FpsController.currentWeapon.fireRate;
                 RaycastHit hit;
@@ -43,6 +44,8 @@ public class FPSShootingControls : MonoBehaviour {
 //                    Debug.DrawRay(mainCam.transform.position, mainCam.transform.forward,Color.red,1);
                     
                     GameObject hitObject = hit.collider.transform.gameObject;
+                    print(hitObject.name);
+
                     if (hitObject.CompareTag("Board")) {
                         hit.transform.gameObject.GetComponent<Animator>().SetTrigger("Hit");
                         switch (hitObject.name) {

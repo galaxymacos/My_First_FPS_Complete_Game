@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fe2ff067898e04ab8db919e0d0df27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 1535273573844938, guid: 983adaf0c76093c4a8383344bdafaeb1,
+  objectToSpawn: {fileID: 1150602089802998, guid: edcdf2be23af0af46a15665bbd2fe890,
     type: 2}
   SpawnPoints:
   - {fileID: 1308904490840630}
@@ -300,4 +300,4 @@ MonoBehaviour:
   - {fileID: 1286275656718736}
   - {fileID: 1165907350829770}
   - {fileID: 1121305902225332}
-  spawnInterval: 3
+  spawnInterval: 9

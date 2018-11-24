@@ -21,9 +21,9 @@ public class Bullet : MonoBehaviour {
 
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.name == "CharacterCollider") {
+		if (other.gameObject.name == "BulletCollider") {
 			other.gameObject.GetComponent<CharacterTarget>().HitByBullet();
-		}
-			Destroy(gameObject);
-	}
+            Destroy(gameObject);
+        }
+    }
 }

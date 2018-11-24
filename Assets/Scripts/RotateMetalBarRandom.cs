@@ -14,7 +14,7 @@ public class RotateMetalBarRandom : MonoBehaviour {
 	void Start () {
 		transform.Rotate(0,Random.Range(0,180),0);
 		FpsPlayer = GameObject.Find("FPS Player");
-		Collider = GameObject.Find("CharacterCollider");
+		Collider = GameObject.Find("BulletCollider");
 	}
 	
 	// Update is called once per frame

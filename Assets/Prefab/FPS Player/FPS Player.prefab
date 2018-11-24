@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 136935629241196792}
   - component: {fileID: 114461690747869562}
   m_Layer: 0
-  m_Name: CharacterCollider
+  m_Name: BulletCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

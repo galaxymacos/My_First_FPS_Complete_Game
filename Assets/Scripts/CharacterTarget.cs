@@ -16,7 +16,7 @@ public class CharacterTarget : MonoBehaviour {
 	}
 
 	public void HitByBullet() {
-		FPSPlayer.GetComponent<Target>().TakeDamage(10);
+        FPSPlayer.GetComponent<Target>().TakeDamage(10);
 	}
 	
 	
