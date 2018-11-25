@@ -44,7 +44,7 @@ public class FPSShootingControls : MonoBehaviour {
 //                    Debug.DrawRay(mainCam.transform.position, mainCam.transform.forward,Color.red,1);
                     
                     GameObject hitObject = hit.collider.transform.gameObject;
-                    print(hitObject.name);
+                    print("Hit: "+hitObject.name);
 
                     if (hitObject.CompareTag("Board")) {
                         hit.transform.gameObject.GetComponent<Animator>().SetTrigger("Hit");
@@ -64,7 +64,8 @@ public class FPSShootingControls : MonoBehaviour {
 
                     EnemyTarget targetScript;
                     if (hitObject.name == "Head") {
-                        targetScript = hit.transform.gameObject.GetComponent<EnemyTarget>();
+                        print(hit.transform.gameObject.name);
+                        targetScript = hit.transform.GetComponentsInParent<EnemyTarget>()[0];
                         GameObject BloodGameObject = Instantiate(bloodParticle, hit.point, Quaternion.LookRotation(hit.normal));
                         targetScript.TakeDamage(FpsController.currentWeapon.damage*2);
                         if (FpsController.currentHandsWeapon.gameObject.name == "deagle") {

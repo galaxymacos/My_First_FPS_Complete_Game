@@ -6021,6 +6021,16 @@ Prefab:
       propertyPath: bloodParticle
       value: 
       objectReference: {fileID: 100006, guid: cb771650f86a58a46ab01616eef4650c, type: 2}
+    - target: {fileID: 114115220767868834, guid: dbde25794923f7741b799f6abf9a6751,
+        type: 2}
+      propertyPath: DeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 94b9d835675c1684098e5c5aefb2d35d, type: 3}
+    - target: {fileID: 82921569744476464, guid: dbde25794923f7741b799f6abf9a6751,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94b9d835675c1684098e5c5aefb2d35d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbde25794923f7741b799f6abf9a6751, type: 2}
   m_IsPrefabAsset: 0
@@ -7546,41 +7556,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
-    - target: {fileID: 135230688986399952, guid: edcdf2be23af0af46a15665bbd2fe890,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 195779058702290362, guid: edcdf2be23af0af46a15665bbd2fe890,
-        type: 2}
-      propertyPath: m_Acceleration
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 195779058702290362, guid: edcdf2be23af0af46a15665bbd2fe890,
-        type: 2}
-      propertyPath: m_AngularSpeed
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 195779058702290362, guid: edcdf2be23af0af46a15665bbd2fe890,
-        type: 2}
-      propertyPath: m_Speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114104414906389632, guid: edcdf2be23af0af46a15665bbd2fe890,
-        type: 2}
-      propertyPath: headCollider
-      value: 
-      objectReference: {fileID: 1620795398}
-    - target: {fileID: 65379012930559490, guid: edcdf2be23af0af46a15665bbd2fe890,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 0.37125015
-      objectReference: {fileID: 0}
-    - target: {fileID: 65379012930559490, guid: edcdf2be23af0af46a15665bbd2fe890,
-        type: 2}
-      propertyPath: m_Center.z
-      value: -0.0075855255
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edcdf2be23af0af46a15665bbd2fe890, type: 2}
   m_IsPrefabAsset: 0
@@ -7841,11 +7816,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 121.772705, y: 102.35167, z: 101.00458}
   m_Center: {x: 0.09588623, y: 51.056816, z: -0.09316826}
---- !u!135 &1620795398 stripped
-SphereCollider:
-  m_CorrespondingSourceObject: {fileID: 135230688986399952, guid: edcdf2be23af0af46a15665bbd2fe890,
-    type: 2}
-  m_PrefabInternal: {fileID: 1566800814}
 --- !u!1 &1638263981
 GameObject:
   m_ObjectHideFlags: 0

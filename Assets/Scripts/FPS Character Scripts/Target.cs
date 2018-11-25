@@ -57,6 +57,7 @@ public class Target : MonoBehaviour {
 			_audioSource.Play();
             DisableAllAnimationAndScriptWhenGameOver();
             StartCoroutine(ShowGameoverScreen());
+            
 		}
 		else {
 			Destroy(gameObject);
