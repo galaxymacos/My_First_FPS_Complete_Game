@@ -39,10 +39,20 @@ public class Grenade : MonoBehaviour {
             }
 
             if (nearbyObject.CompareTag("Enemy")) {
-                Vector3 directionVector = (nearbyObject.transform.position) - (transform.position);
-                nearbyObject.GetComponent<EnemyTarget>().TakeDamage(150f);
-                if(nearbyObject!=null)
-                nearbyObject.transform.position = nearbyObject.transform.position + directionVector.normalized * 5f;
+                print("boom enemy");
+//                Vector3 directionVector = (nearbyObject.transform.position) - (transform.position);
+//                nearbyObject.GetComponent<EnemyTarget>().TakeDamage(150f);
+//                if(nearbyObject!=null)
+//                nearbyObject.transform.position = nearbyObject.transform.position + directionVector.normalized * 5f;
+                
+                nearbyObject.gameObject.GetComponent<EnemyTarget>().Die();
+                Collider[] enemyComponentcolliders = Physics.OverlapSphere(transform.position, explosionRadius);
+                foreach (Collider hit in enemyComponentcolliders) {
+                    Rigidbody rb = hit.GetComponent<Rigidbody>();
+                    if (rb != null) {
+                        rb.AddExplosionForce(20f,transform.position,explosionRadius,0.5f,ForceMode.VelocityChange);
+                    }
+                }
             }
             else {
                 Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();

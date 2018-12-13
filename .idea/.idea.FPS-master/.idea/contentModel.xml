@@ -54,6 +54,7 @@
             </e>
           </e>
         </e>
+        <e p="DisappearDelay.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="PackageManagerAssembly" t="Include">
             <e p="PackageImportList.txt" t="Include" />
@@ -133,6 +134,7 @@
             <e p="SpawnPrefabOnKeyDown.cs" t="Include" />
           </e>
         </e>
+        <e p="FollowPlayer.cs" t="Include" />
         <e p="mp_ae" t="Include">
           <e p="LICENSE.txt" t="Include" />
           <e p="mp_ae.shader" t="Include" />
@@ -154,6 +156,7 @@
             <e p="NavMeshSurface.cs" t="Include" />
           </e>
         </e>
+        <e p="PauseScreenBehavior.cs" t="Include" />
         <e p="PostProcessing" t="Include">
           <e p="Editor" t="Include">
             <e p="Attributes" t="Include">
@@ -316,6 +319,7 @@
             </e>
           </e>
         </e>
+        <e p="Ragdoll.cs" t="Include" />
         <e p="SampleScenes" t="Include">
           <e p="Menu" t="Include">
             <e p="Scripts" t="Include">
@@ -673,6 +677,7 @@
             <e p="Readme.cs" t="Include" />
           </e>
         </e>
+        <e p="UIController.cs" t="Include" />
         <e p="Western Props" t="Include">
           <e p="Scripts" t="Include">
             <e p="Destructible.cs" t="Include" />
