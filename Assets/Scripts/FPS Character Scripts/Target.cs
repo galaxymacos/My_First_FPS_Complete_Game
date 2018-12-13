@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Target : MonoBehaviour {
 
 	[SerializeField] internal float maxHp = 200f;
 	internal float currentHp;
 
+    [SerializeField] private Slider healthBar;
 	[SerializeField] private TextMeshProUGUI hpBar;
 
 	[SerializeField] private GameObject GameoverScreen;
@@ -23,7 +25,11 @@ public class Target : MonoBehaviour {
 	void Start () {
 		currentHp = maxHp;
 		_audioSource = GetComponent<AudioSource>();
-	}
+		if (healthBar) {
+			healthBar.value = currentHp / maxHp;
+		}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,10 +48,11 @@ public class Target : MonoBehaviour {
 
 	public void TakeDamage(float damage) {
 		currentHp -= damage;
-		hpBar.text = "HP: " + currentHp;
-	}
+        hpBar.text = "HP: " + currentHp;
+        healthBar.value = currentHp / maxHp;
+    }
 
-	public void Die() {
+    public void Die() {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         hpBar.text = "HP:0";

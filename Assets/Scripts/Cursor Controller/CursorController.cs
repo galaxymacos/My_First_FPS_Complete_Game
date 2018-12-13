@@ -12,11 +12,11 @@ public class CursorController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ControlCursor();
+        ToggleCursor();
 
     }
 
-    void ControlCursor() {
+    public void ToggleCursor() {
 	    if (Input.GetKeyDown(KeyCode.Tab)) {
 		    Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
 		    Cursor.visible = Cursor.lockState != CursorLockMode.Locked;
